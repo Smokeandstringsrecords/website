@@ -146,6 +146,51 @@ textarea.input { min-height:140px; resize:vertical; }
   .contact-page .contact-grid { grid-template-columns: 1fr; }
   .contact-page .section-inner { padding: 0 18px; }
 }
+/* Fix contact info alignment and spacing */
+.contact-info {
+  /* left-align text and stack items neatly */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 26px;              /* slightly more breathing room */
+}
+
+/* headings / paragraphs / links inside the left card */
+.contact-info h3,
+.contact-info p,
+.contact-info a {
+  text-align: left;
+  width: 100%;
+  margin: 0;
+}
+
+/* Make follow buttons centered but keep their own layout */
+.contact-info .social-columns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* keep buttons centered horizontally */
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Slight visual tweaks so the left card height matches the right form */
+.contact-info,
+.contact-card {               /* contact-card is the right form wrapper class */
+  align-self: stretch;       /* encourages equal heights in grid/flex layouts */
+}
+
+/* Mobile: stack and center text again for narrow screens */
+@media (max-width: 900px) {
+  .contact-info {
+    text-align: center;
+    align-items: center;
+  }
+  .contact-info .social-columns { justify-content: center; }
+}
+
 /* ABOUT PAGE STYLES */
 
 .about-hero {
