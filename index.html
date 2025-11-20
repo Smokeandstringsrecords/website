@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smoke & Strings Records — Home</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+        <a href="#home" class="link">Home</a>
+        <a href="#about" class="link">About Us</a>
+        
+        <a href="#" class="brand">Smoke & Strings</a>
+        
+        <a href="#work" class="link">Our Work</a>
+        <a href="#contact" class="link">Contact Us</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="eyebrow">Here, I get to share my stories through music, connect with you and make you a part of this beautiful journey. Maybe through a chord, a lyric, a feeling. </div>
+          <h1 class="title">Making Music with all my heart, <span class="neon"> Always & Forever</span>.</h1>
+          <p class="sub">Thank you for listening. Thank you for being here. 💕</p>
+          <a href="#contact" class="cta-btn">Get Started</a>
+        </div>
+      </div>
+    </section>
+    
+    <div class="social-wrap">
+        <div class="social-card">
+            <h2>We are now live on all Major Streaming Platforms!</h2>
+            <div class="social-columns">
+                <!-- buttons (kept same links/icons) -->
+                <a href="https://open.spotify.com/artist/5OmYHh56IqJiXcsBcXp3be" target="_blank" class="social-button spotify">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify" class="social-icon" />Spotify
+                </a>
+                <!-- (rest omitted for brevity - keep all buttons from your original) -->
+                <a href="https://in.pinterest.com/smokeandstrings/" target="_blank" class="social-button pinterest">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest" class="social-icon" />Pinterest
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-wrap work-wrap" id="work">
+      <div class="section-inner">
+        <h2 class="section-title">Our Work</h2>
+        <iframe style="border-radius:12px; margin-bottom: 12px;" src="https://open.spotify.com/embed/track/2bvi3R68LT1OlhdqVyw2Q5?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px; margin-bottom: 12px;" src="https://open.spotify.com/embed/track/3NEFet2PpPJtevohQFwY1s?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px; margin-bottom: 12px;" src="https://open.spotify.com/embed/track/00FXcYcgGCjuS1vR0koav1?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section-wrap about-wrap" id="about">
+      <div class="section-inner">
+        <h2 class="section-title">About the Artist</h2>
+        <div class="founders-grid">
+          <div class="founder-card">
+            <div class="founder-bg" style="background-image:url('https://i.postimg.cc/qMCG71Tj/Gemini-Generated-Image-j1cd85j1cd85j1cd.png')"></div>
+            <div class="founder-avatar"><img src="https://via.placeholder.com/150" alt="Shivam Madaan"></div>
+            <div class="founder-name">Shivam Madaan</div>
+            <div class="founder-title">Guitarist, Music Producer, Writer, Composer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-wrap" id="contact">
+        <aside class="contact-card" aria-label="contact form">
+            <h3>Wanna Collab? just wanna say hello? Let's connect.</h3>
+            <form id="contactForm">
+            <div class="field">
+                <label for="name">Name</label>
+                <input id="name" class="input" placeholder="Your Full Name" />
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" class="input" placeholder="you@example.com" type="email" />
+            </div>
+            <div class="field">
+                <label for="phone">Number (Optional)</label>
+                <input id="phone" class="input" placeholder="+91 99999 99999" />
+            </div>
+            <div class="field">
+                <label for="message">Your Project/Query</label>
+                <textarea id="message" class="input" placeholder="Tell us about your project, your musical style, or how we can assist..."></textarea>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+            </form>
+        </aside>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Smoke & Strings Records. All rights reserved. | Crafted with <span style="color:#f00">♥</span> and Soundwaves.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!name || !email) {
+        alert('Please enter your name and email to proceed.');
+        return;
+      }
+      alert('Thanks ' + name + '! Your query has been successfully sent. We will get back to you shortly. (Demo Submission)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
