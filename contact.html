@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Smoke & Strings Records</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Optional favicon line if you added one -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="link">Home</a>
+      <a href="index.html#about" class="link">About</a>
+      <a href="#" class="brand">Smoke & Strings</a>
+      <a href="index.html#work" class="link">Our Work</a>
+      <a href="contact.html" class="link">Contact</a>
+    </div>
+  </nav>
+
+  <main style="padding-top:110px">
+    <section class="section-wrap contact-page">
+      <div class="section-inner" style="max-width:1000px;">
+        <h1 class="section-title" style="margin-bottom:8px;">Let's Connect</h1>
+        <p style="text-align:center; color:#cfcfcf; margin-bottom:28px;">
+          For collabs, bookings, or just a hello — leave a message and I'll get back to you.
+        </p>
+
+        <div class="contact-grid">
+          <!-- Left: contact info -->
+          <div class="contact-info card">
+            <h3>Contact Info</h3>
+            <p style="margin-top:6px;">Email: <a href="mailto:hello@smokeandstrings.in">hello@smokeandstrings.in</a></p>
+            <p>Phone: <a href="tel:+919999999999">+91 99999 99999</a></p>
+
+            <hr style="border-color: rgba(255,255,255,0.04); margin:18px 0;">
+
+            <h4 style="margin-bottom:6px;">Follow</h4>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="social-button" href="https://open.spotify.com" target="_blank">Spotify</a>
+              <a class="social-button" href="https://youtube.com" target="_blank">YouTube</a>
+              <a class="social-button" href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+          </div>
+
+          <!-- Right: contact form -->
+          <aside class="contact-card card" aria-label="contact form">
+            <!-- ---------- Option A: Formspree (uncomment the next line and replace FORM_ID) ----------
+                 <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> -->
+
+            <!-- ---------- Option B: Demo/local JavaScript (uncomment this line if you are testing) ---------- -->
+            <form id="contactForm" action="#" method="POST" novalidate>
+
+              <label class="field">
+                <span class="field-label">Name <span style="color:#ffb3b3">*</span></span>
+                <input id="name" name="name" class="input" type="text" placeholder="Your full name" required>
+              </label>
+
+              <label class="field">
+                <span class="field-label">Email <span style="color:#ffb3b3">*</span></span>
+                <input id="email" name="_replyto" class="input" type="email" placeholder="you@example.com" required>
+              </label>
+
+              <label class="field">
+                <span class="field-label">Phone (optional)</span>
+                <input id="phone" name="phone" class="input" type="tel" placeholder="+91 99999 99999">
+              </label>
+
+              <label class="field">
+                <span class="field-label">Message <span style="color:#ffb3b3">*</span></span>
+                <textarea id="message" name="message" class="input" placeholder="Tell me about your project..." required></textarea>
+              </label>
+
+              <!-- Anti-spam honeypot for Formspree / bots -->
+              <input type="text" name="_gotcha" style="display:none">
+
+              <button class="btn" type="submit">Send Message</button>
+
+              <div id="formStatus" role="status" aria-live="polite" style="margin-top:12px; color:#cfcfcf;"></div>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Smoke & Strings Records. All rights reserved.</p>
+  </footer>
+
+<script>
+/* ---------- Demo JS form handler (client-only) ----------
+   - If you use Formspree or Netlify, you can remove this JS.
+   - For Formspree set the <form action="https://formspree.io/f/YOUR_ID" method="POST"> and remove this script.
+*/
+(function () {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+
+  function validateEmail(email) {
+    // simple email test
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = form.name.value.trim();
+    const email = form['_replyto'].value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      status.textContent = 'Please fill the required fields (name, email, message).';
+      status.style.color = '#ffb3b3';
+      return;
+    }
+    if (!validateEmail(email)) {
+      status.textContent = 'Please enter a valid email address.';
+      status.style.color = '#ffb3b3';
+      return;
+    }
+
+    // Simulate sending...
+    status.textContent = 'Sending…';
+    status.style.color = '#cfcfcf';
+
+    setTimeout(() => {
+      status.textContent = `Thanks ${name}! Your message has been received (demo).`;
+      status.style.color = '#b4f7e6';
+      form.reset();
+    }, 750);
+  });
+})();
+</script>
+</body>
+</html>
