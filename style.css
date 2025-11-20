@@ -145,3 +145,94 @@ textarea.input { min-height:140px; resize:vertical; }
   .contact-page .contact-grid { grid-template-columns: 1fr; }
   .contact-page .section-inner { padding: 0 18px; }
 }
+/* ABOUT PAGE STYLES */
+
+.about-hero {
+  min-height: 50vh;
+  background: url("https://i.postimg.cc/qMCG71Tj/Gemini-Generated-Image-j1cd85j1cd85j1cd.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.85)
+  );
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 48px;
+  color: #e6ffff;
+  text-shadow: 0 6px 20px rgba(4,194,217,0.3);
+  margin-bottom: 12px;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  color: #cfdcdc;
+}
+
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 320px auto;
+  gap: 40px;
+  align-items: start;
+}
+
+.about-photo-card {
+  text-align: center;
+}
+
+.about-photo-frame img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255,255,255,0.9);
+  padding: 5px;
+  background: linear-gradient(45deg, var(--accent), #00a6ff);
+  box-shadow: 0 0 25px rgba(4,194,217,0.4);
+}
+
+.about-text-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 40px rgba(2,8,20,0.5);
+}
+
+.about-text-card h2 {
+  color: #eafafa;
+  margin-top: 12px;
+}
+
+.about-text-card p {
+  color: #cfcfcf;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Mobile */
+@media(max-width: 900px) {
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-photo-card {
+    margin-bottom: 20px;
+  }
+}
